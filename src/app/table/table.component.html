@@ -1,0 +1,32 @@
+<h3>Population Compliance Chart Data</h3>
+<!-- <div class="dropdown">
+    <h3>Select Chart</h3>
+    <div class="dropdown-content">
+        <a routerLink = "bar">Bar Chart</a>
+        <br>
+        <a routerLink = "multibar">Multibar Chart</a>
+        <br>
+        <a routerLink = "discretebar">Discretebar Chart</a>
+    </div>
+</div>
+<br> -->
+<div>
+<table id = "provider">
+    
+      <th *ngFor = "let col of columns">
+        {{col}}
+      </th>
+    
+    <tr *ngFor = "let pro of providers | async">
+      <td *ngFor = "let col of columns">
+        {{pro[col]}}
+      </td>
+    </tr>
+</table>
+</div>
+
+<div>
+    <button (click)="showGoogle()">Show Google</button>
+</div>
+
+

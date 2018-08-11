@@ -1,0 +1,14 @@
+<div class="dropdown">
+  <!-- <h3>Select Chart</h3> -->
+  <div class="dropdown">
+      <button class = "dropdown-button" (click)="showDropdown()">Select Chart</button>
+      <div *ngIf = "!isDropdown" class="dropdown-content">
+          <a routerLink = "multibar">Multibar Chart</a>
+          <br>
+          <a routerLink = "discretebar">Discretebar Chart</a>
+      </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<br>

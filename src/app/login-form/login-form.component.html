@@ -1,0 +1,15 @@
+<form (submit)="loginUser($event)">
+  <div class = "input">
+    <label>Username : </label>
+    <input type="text" placeholder="Enter Username">
+  </div><br>
+  <div class = "input">
+      <label>Password : </label>
+      <input type="password" placeholder="Enter Password">
+  </div><br>
+  <p *ngIf="isValid" id = "isValid">Incorrect Username or Password. Please Try Again!!!</p>
+  <div class = "input">
+      <input type="submit" value = "Login">
+  </div>
+
+</form>

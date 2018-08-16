@@ -6,6 +6,8 @@ import { NvD3Module } from 'ng2-nvd3';
 import { HttpModule } from '@angular/http';
 import 'nvd3';
 
+import { ControllerService } from '././controller.service';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -58,7 +60,7 @@ import { RegistrationComponent } from './registration/registration.component';
       } 
     ])
   ],
-  providers: [],
+  providers: [ControllerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -28,6 +28,8 @@ export const PROVIDER: any[] =
   
 ]
 
+export const COLUMNS : any[] = ['Provider','Compliant','Non-Compliant']
+
 export const DATA: any[] =[
       {
         key: "Compliance",

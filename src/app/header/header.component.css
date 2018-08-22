@@ -1,4 +1,7 @@
-h1{
-    text-align: center;
-    color: orange;
+#outset{
+    border-bottom: 3px solid gray;
+}
+
+#image{
+    width:150px;height:50px;
 }

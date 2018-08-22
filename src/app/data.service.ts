@@ -18,5 +18,15 @@ export class DataService {
   }
   getColumns(): string[]{
     return ["Provider", "Compliant", "Non-Compliant"]};
+
+  private data = {};
+
+  setSharedData(option, value){
+    this.data[option] = value;
+  }
+
+  getSharedData(){
+    return this.data;
+  }
   
 }

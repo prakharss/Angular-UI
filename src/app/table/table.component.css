@@ -1,23 +1,26 @@
 #provider {
-    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    font-family: "Helvetica";
+    box-sizing: border-box;
+    margin: 0 auto;
     border-collapse: collapse;
-    width: 100%;
+    
 }
 
-#provider td, #provider th {
+#provider td, #provider thead {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px;
+    
 }
 
 #provider tr:nth-child(even){background-color: #f2f2f2;}
 
 #provider tr:hover {background-color: #ddd;}
 
-#provider th {
+#provider thead {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #4CAF50;
+    background-color: rgb(128, 134, 134);
     color: white;
 }
 
@@ -26,7 +29,7 @@ h3{
     color: green;
 }
 
-.dropdown {
+/* .dropdown {
     position: relative;
     float : left;
 }
@@ -43,4 +46,10 @@ h3{
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
+} */
+
+.add{
+    padding: 10px;
+    text-align:center;
+    display:block;
+    }

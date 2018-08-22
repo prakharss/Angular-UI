@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NvD3Module } from 'ng2-nvd3';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import 'nvd3';
 
 import { ControllerService } from '././controller.service';
@@ -17,6 +18,9 @@ import { TableComponent } from './table/table.component';
 import { DiscretebarComponent } from './discretebar/discretebar.component';
 import { MultibarComponent } from './multibar/multibar.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { AddComponent } from './add/add.component';
+import { EditComponent } from './edit/edit.component';
+import { DeleteComponent } from './delete/delete.component';
 
 @NgModule({
   declarations: [
@@ -28,11 +32,15 @@ import { RegistrationComponent } from './registration/registration.component';
     RegistrationComponent,
     TableComponent,
     DiscretebarComponent,
-    MultibarComponent
+    MultibarComponent,
+    AddComponent,
+    EditComponent,
+    DeleteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     NvD3Module,
     HttpModule,
     RouterModule.forRoot([
@@ -55,7 +63,19 @@ import { RegistrationComponent } from './registration/registration.component';
           {
             path : 'discretebar',
             component : DiscretebarComponent
-          } 
+          },
+          {
+            path : 'add',
+            component : AddComponent
+          },
+          {
+            path : 'edit',
+            component : EditComponent
+          },
+          {
+            path : 'delete',
+            component : DeleteComponent
+          }
         ]
       } 
     ])

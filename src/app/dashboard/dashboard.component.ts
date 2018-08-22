@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,12 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  public username;
+  public sharedData;
   isDropdown : boolean = true;
 
   showDropdown(){
     this.isDropdown = !this.isDropdown;
   }
-  constructor() { }
+  constructor(private route: ActivatedRoute, public dataService : DataService) { }
   ngOnInit() {
+    this.route.queryParams.subscribe(params => {this.sharedData = this.dataService.getSharedData()});
+    this.username = this.sharedData.username;
   }
+
 }

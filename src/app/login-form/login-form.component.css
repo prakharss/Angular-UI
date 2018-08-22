@@ -34,12 +34,32 @@ input[type=submit]:hover {
     background-color: #45a049;
 }
 
-div {
+#container {
+    width : 30%;
     border-radius: 5px;
-    background-color: #f2f2f2;
+    background-color: #ffff;
     padding: 20px;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+    min-width: 0px;
+    
 }
+/* 
+.main {
+    background-color:gainsboro;
+    padding-top: 13%;
+    padding-bottom: 13%;
+} */
 
-#isValid{
-    color : red;
+#alert {
+    width : 50%;
+    border-radius: 5px;
+    background-color:pink;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px;
+    border: none;
 }

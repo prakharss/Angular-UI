@@ -10,9 +10,8 @@
     </div>
 </div>
 <br> -->
-<div>
-<table id = "provider">
-    
+<!-- <div>
+  <table id = "provider">
       <th *ngFor = "let col of columns">
         {{col}}
       </th>
@@ -22,14 +21,34 @@
         {{pro[col]}}
       </td>
     </tr>
-</table>
-</div>
-
+  </table>
+  </div> -->
+  
 <div>
-    <button (click)="onClick()">Show Google</button>
+  <table id = "provider">
+    <thead>
+          <tr>
+            <td><b>Index</b></td>
+            <td><b>Provider</b></td>
+            <td><b>Compliance</b></td>
+            <td><b>NonCompliance</b></td>
+            <td><b>Edit</b></td>
+            <td><b>Delete</b></td>
+          </tr>
+    </thead>
+    <tbody class = "tbody">
+      <tr *ngFor = "let x of tableData, index as i">
+        <td>{{i+1}}</td>
+        <td> {{x.providername}} </td>
+        <td> {{x.compliance}} </td>
+        <td> {{x.noncompliance}}</td>
+        <td><button (click) = "onEdit(x.providername,x.compliance,x.noncompliance)">Edit</button></td>
+        <td><button (click) = "onDelete(x.providername,x.compliance,x.noncompliance)">X</button></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-
-<p>{{details}}</p>
-
-
+<div class ="add">
+    <button class = "button" (click)="onAdd()">Add</button>
+    <!-- <button (click)="onShow()">Show</button> -->
+</div>

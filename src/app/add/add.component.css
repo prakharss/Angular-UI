@@ -1,0 +1,16 @@
+#container {
+    width : 30%;
+    border-radius: 5px;
+    background-color: #ffff;
+    padding: 20px;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: block;
+    min-width: 0px;
+}
+
+.button{
+    float : right;
+}

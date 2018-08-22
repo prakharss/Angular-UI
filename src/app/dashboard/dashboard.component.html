@@ -1,14 +1,27 @@
-<div class="dropdown">
-  <!-- <h3>Select Chart</h3> -->
-  <div class="dropdown">
+<!-- <div class = "head" >
+    <div class = "welcome">Welcome {{username}}</div>
+    <div class="dropdown">
       <button class = "dropdown-button" (click)="showDropdown()">Select Chart</button>
       <div *ngIf = "!isDropdown" class="dropdown-content">
           <a routerLink = "multibar">Multibar Chart</a>
           <br>
           <a routerLink = "discretebar">Discretebar Chart</a>
       </div>
-  </div>
-</div>
+    </div>
+</div> -->
 
+<ul>
+        <li>
+            <div class="dropdown">
+                <button class = "dropdown-button" (click)="showDropdown()" >Select Chart</button>
+                <div *ngIf = "!isDropdown" class="dropdown-content">
+                    <a routerLink = "multibar">Multibar Chart</a>
+                    <br>
+                    <a routerLink = "discretebar">Discretebar Chart</a>
+                </div>
+            </div>
+        </li> 
+        <li><div class = "welcome"><b>Welcome {{username}} </b></div></li>
+</ul>
 <router-outlet></router-outlet>
 <br>
